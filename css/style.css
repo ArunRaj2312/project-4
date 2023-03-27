@@ -12,13 +12,12 @@
 	position:relative;
 	text-align:center;
 }
-.head div{
-	position:absolute;
-	width:100%;
-	top:40%;
-	opacity:0;
-	animation: text 3s ease-in-out;
-	color:white;
+.head{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	color: white;
 }
 .head h4{
 	font-size:20px;
@@ -27,10 +26,8 @@
 	font-size:50px;
 	font-weight:100;
 }
-.head+a{
-	position:absolute;
-	top:70%;
-	left:45%;
+.head a{
+	margin-top: 15px;
 	display:inline-block;
 	background-color:skyblue;
 	text-decoration:none;
@@ -38,36 +35,13 @@
 	color:white;
 	border-radius:50px;
 }
-.head div:nth-child(1){
-	animation-delay:0s;
-}
-.head div:nth-child(2){
-	animation-delay:3s;
-}
-.head div:nth-child(3){
-	animation-delay:6s;
-}
-.head div:nth-child(4){
-	animation-delay:9s;
-}
-.head div:nth-child(5){
-	animation-delay:12s;
-}
-@keyframes text{
-	50%{
-		opacity:1;
-	}
-	100%{
-		opacity:0;
-	}
-}
 .nav-bar{
 	width:100%;
 	position:fixed;
 	top:0;
 	background-color:white;
 	z-index:1;
-}
+} 
 .nav-bar nav{
 	width:85%;
 	margin:0 auto;
@@ -466,6 +440,9 @@ footer p{
 	.heading{
 		width:90%;
 	}
+	.heading h1::after{
+		left: 20%;
+	}
 	.col-1{
 		width:100%;
 	}
@@ -502,6 +479,15 @@ footer p{
 	.heading{
 		width:70%;
 	}
+	.heading h1::after{
+		left: 30%;
+	}
+	.col-1{
+		width:33.3%;
+	}
+	.col-2{
+		width:33.3%;
+	}
 	.col-10{
 		width:50%;
 		margin:0 auto;
@@ -523,11 +509,8 @@ footer p{
 	.heading{
 		width:55%;
 	}
-	.col-1{
-		width:33.3%;
-	}
-	.col-2{
-		width:33.3%;
+	.heading h1::after{
+		left: 36%;
 	}
 	.logo-box{
 		width:25%
