@@ -15,16 +15,16 @@
 					<h1>MYWAY</h1>
 				</div>
 				<div class="menu-bar">
-					<i class="bi bi-list"></i>
+					<i class="bi bi-list" onclick="navbar()"></i>
 				</div>
-				<div class="nav-link">
-					<a href="#">Services</a>
-					<a href="#">Features</a>
-					<a href="#">Works</a>
-					<a href="#">Gallery</a>
-					<a href="#">Team</a>
-					<a href="#">Contact</a>
-					<a href="#">Purchaes</a>
+				<div class="nav-link" onclick="fun()">
+					<a href="#services">Services</a>
+					<a href="#features">Features</a>
+					<a href="#works">Works</a>
+					<a href="#gallery">Gallery</a>
+					<a href="#team">Team</a>
+					<a href="#contact">Contact</a>
+					<a href="#purchaes">Purchaes</a>
 				</div>
 			</nav>
 		</div>
@@ -39,7 +39,7 @@
 		</div>	
 	</div>
 </section>
-<section class="section-2">
+<section class="section-2" id="services">
 	<div class="container">
 		<div class="heading">
 			<h1>2400 Downloads</h1>
@@ -88,7 +88,7 @@
 		</div>
 	</div>
 </section>
-<section class="section-3">
+<section class="section-3" id="features">
 	<div class="container">
 		<div class="row-2">
 			<div class="logo-box">
@@ -152,7 +152,7 @@
 		</div>
 	</div>
 </section>
-<section class="section-5">
+<section class="section-5" id="work">
 	<div class="work">
 		<h3>How awesome it is?</h3>
 		<h1>Works & Features</h1>
@@ -213,7 +213,7 @@
 		</div>
 	</div>
 </section>
-<section class="section-7">
+<section class="section-7" id="gallery">
 	<div class="work">
 		<h1>Gallery</h1>
 		<h3>Image, YouTube, Vimeo and Instagram options</h3>
@@ -257,7 +257,7 @@
 		</div>
 	</div>
 </section>
-<section class="section-9">
+<section class="section-9" id="team">
 	<div class="work">
 		<h3>And we are?</h3>
 		<h1>Awesome, we know.</h1>
@@ -355,7 +355,7 @@
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.583365822228!2d77.38276921445788!3d8.918267893169789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04270a4fdc613d%3A0x71e02e0c6b3944!2sFabevy%20Technologies!5e0!3m2!1sen!2sin!4v1669611728615!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 </section>
-<section class="section-13">
+<section class="section-13" id="contact">
 	<div class="row-13">
 		<div class="col-13">
 			<div class="card-13">
@@ -428,5 +428,24 @@
 		</div>
 	</footer>
 </section>
+<script>
+	var i=1;
+	function navbar(){
+		i++;
+		if(i%2==0){
+			document.querySelector('.nav-link').style='display:flex;width: 50%;flex-direction: column;position: absolute;background: white;right: 0;top: 50px;'
+		
+		}
+		if(i%2!=0){
+			document.querySelector('.nav-link').style='display:none'
+		}
+	}
+	function fun(){
+		if(document.querySelector('.nav-link').style.display=='flex'){
+			document.querySelector('.nav-link').style='display:none'
+			i=1
+		}
+	}
+</script>
 </body>
 </html>
